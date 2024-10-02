@@ -1,53 +1,56 @@
 import './App.css';
-import ReactLogo from './ReactLogo';
 import ReactorHeader from './ReactorHeader';
-import ReactDataStatus from './ReactDateStatus';
 
 function App() {
   return (
-    // <div className='App'
-    //   style={{ display: 'flex', alignItems: 'center', width: '120px', height: '120px' }}>
-    //   <ReactLogo />
-    //   <ReactorHeader />
-    // </div>
     <div style={{
       display: 'grid',
-      gridTemplateRows: '1fr 1fr 1fr 1fr', // čtyři řádky
-      gridTemplateColumns: '1fr 4fr 1fr', // tři sloupce
       height: '100vh',
-      gap: '5px' // mezery mezi mřížkovými prvky
+      gridTemplateRows: 'auto 1fr auto', 
+      gridTemplateColumns: '1fr 4fr 1fr',
     }}>
       <div style={{
-        border: '1px dashed black',
-        backgroundColor: 'lightgreen',
-        gridRow: '1', // Umístění do 2. řádku
-        gridColumn: '1' // Umístění do 1. sloupce
-      }}>
-        <ReactLogo />
-      </div>
-      <div style={{
-        border: '1px dashed black',
+        //border: '1px dashed black',
         backgroundColor: 'lightblue',
-        gridRow: '1', // Umístění do 1. řádku
-        gridColumn: '2' // Přes všechny sloupce (1 až 3)
+        gridRow: '1',
+        gridColumn: '1/-1'
       }}>
         <ReactorHeader />
       </div>
+
       <div style={{
         border: '1px dashed black',
-        backgroundColor: 'lightcoral',
-        gridRow: '1', // Umístění do 2. řádku
-        gridColumn: '3' // Umístění do 3. sloupce
+        backgroundColor: 'lightgray',
+        gridRow: '2', // Umístění do 3. řádku
+        gridColumn: '1 ' // Přes všechny sloupce (1 až 3)
       }}>
-        <ReactDataStatus/>
+        Footer1
       </div>
       <div style={{
         border: '1px dashed black',
         backgroundColor: 'lightgray',
-        gridRow: '3', // Umístění do 3. řádku
-        gridColumn: '1 / 4' // Přes všechny sloupce (1 až 3)
+        gridRow: '2', // Umístění do 3. řádku
+        gridColumn: '2' // Přes všechny sloupce (1 až 3)
       }}>
-        Footer
+        Footer2
+      </div>
+      <div style={{
+        border: '1px dashed black',
+        backgroundColor: 'lightgray',
+        gridRow: '2', // Umístění do 3. řádku
+        gridColumn: '3' // Přes všechny sloupce (1 až 3)
+      }}>
+        Footer3
+      </div>
+
+      <div style={{
+        border: '1px dashed black',
+        backgroundColor: 'lightgray',
+        height: '100%',
+        gridRow: '3', // Umístění do 3. řádku
+        gridColumn: 'span 3' // Přes všechny sloupce (1 až 3)
+      }}>
+        Patička
       </div>
     </div>
   );

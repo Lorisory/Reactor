@@ -2,8 +2,20 @@ import logo from './logo.svg'; // Ujisti se, že soubor logo.svg existuje v tvé
 
 function ReactLogo() {
     return (
-        <div className="App-header">
-            <img src={logo} className="App-logo" alt="logo" style={{ width: '100%', height: '100%' }} />
+        <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            width: '100%',
+            height: '100%'
+        }}>
+            <img src={logo}
+                className="App-logo"
+                style={{
+                    maxWidth: '100%',
+                    maxHeight: '100%',
+                    objectFit: 'contain'
+                }} />
         </div>
     );
 }

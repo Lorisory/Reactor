@@ -1,6 +1,5 @@
 import './App.css';
 import ReactLogo from './ReactLogo';
-import ReactDateStatus from './ReactDateStatus';
 
 function ReactorHeader() {
   return (
@@ -10,16 +9,20 @@ function ReactorHeader() {
         width: '100%',
         height: '100%',
         gridTemplateRows: '80px',
-        gridTemplateColumns: '1fr 10fr 2fr',
+        gridTemplateColumns: '1fr 4fr',
       }}>
         <div className="App-header"
           style={{
-            // border: '2px dashed orange',
+            display: 'flex',
+            alignItems: 'center',
+            textAlign: 'center',
+            justifyContent: 'center', // Centers content horizontally
             gridRow: '1',
-            gridColumn: '1'
+            gridColumn: '1',
           }}>
           <ReactLogo />
         </div>
+
 
         <div className='App-header '
           style={{
@@ -37,14 +40,14 @@ function ReactorHeader() {
           </h1>
         </div>
 
-        <div style={{
+        {/* <div style={{
           //border: '1px dashed black',
           width: '100%',
-          gridRow: '1', 
-          gridColumn: '3' 
+          gridRow: '1',
+          gridColumn: '3'
         }}>
           <ReactDateStatus />
-        </div>
+        </div> */}
 
       </div>
     </header>

@@ -1,13 +1,15 @@
 import './App.css';
 import ReactorHeader from './ReactorHeader';
+import MainMenu from './MainMenu';
+import ReactorFooter from './ReactorFooter';
 
 function App() {
   return (
     <div style={{
       display: 'grid',
       height: '100vh',
-      gridTemplateRows: 'auto 1fr auto', 
-      gridTemplateColumns: '1fr 4fr 1fr',
+      gridTemplateRows: 'auto 1fr auto',
+      gridTemplateColumns: '1fr 4fr ',
     }}>
       <div style={{
         //border: '1px dashed black',
@@ -19,38 +21,34 @@ function App() {
       </div>
 
       <div style={{
-        border: '1px dashed black',
-        backgroundColor: 'lightgray',
-        gridRow: '2', // Umístění do 3. řádku
-        gridColumn: '1 ' // Přes všechny sloupce (1 až 3)
+        //border: '1px dashed green',
+        gridRow: '2',
+        gridColumn: '1'
       }}>
-        Footer1
+        <MainMenu />
       </div>
-      <div style={{
-        border: '1px dashed black',
-        backgroundColor: 'lightgray',
-        gridRow: '2', // Umístění do 3. řádku
-        gridColumn: '2' // Přes všechny sloupce (1 až 3)
-      }}>
-        Footer2
-      </div>
-      <div style={{
-        border: '1px dashed black',
-        backgroundColor: 'lightgray',
-        gridRow: '2', // Umístění do 3. řádku
-        gridColumn: '3' // Přes všechny sloupce (1 až 3)
-      }}>
-        Footer3
-      </div>
+
 
       <div style={{
         border: '1px dashed black',
         backgroundColor: 'lightgray',
-        height: '100%',
-        gridRow: '3', // Umístění do 3. řádku
-        gridColumn: 'span 3' // Přes všechny sloupce (1 až 3)
+        display:'flex',
+        alignContent:'center',
+        gridRow: '2', // Umístění do 3. řádku
+        gridColumn: '2' // Přes všechny sloupce (1 až 3)
       }}>
-        Patička
+        Body
+      </div>
+
+      <div style={{
+        //border: '1px dashed yellow',
+        //backgroundColor: 'lightgray',
+        height: '100%',
+        minHeight: '10pt',
+        gridRow: '3',
+        gridColumn: 'span 3' 
+      }}>
+        <ReactorFooter />
       </div>
     </div>
   );

@@ -1,0 +1,17 @@
+To do items
+    -udělat patičku 
+    -udělat hlavní menu
+    -udělat home screen
+    -
+
+SPRINT BACKLOGS
+    -
+
+SPRINT SCHEDULE 30.9.-6.10.
+    30.09. pondělí
+    01.10. úterý
+    02.10. středa
+    03.10. čtvrtek
+    04.10. pátek
+    05.10. sobota
+    06.10. neděle

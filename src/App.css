@@ -28,7 +28,29 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.MainMenuButtonStyle {
+  background-color: #61dafb;
+  width: calc(100% - 30px);
+  margin: 10px 15px 0 15px;
+  text-align: center;
+  display: flex;
+  font-size: 18pt;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  min-height: auto;
+  height: auto;
+  border: none;
+  border-radius: 5px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  white-space: normal;
+  box-sizing: border-box;
+  padding: 6pt 6pt;
 }

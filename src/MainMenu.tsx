@@ -1,7 +1,9 @@
 import './App.css';
 import HomeIcon from './Icons/HomeIcon';
+import { useNavigate  } from 'react-router-dom';
 
 function MainMenu() {
+    const navigate = useNavigate();
     return (
         <div className="App-header"
             style={{
@@ -13,14 +15,17 @@ function MainMenu() {
                 height: '100%',
             }}
         >
+                <button 
+                onClick={()=> navigate('/HomeView')}
+                className="MainMenuButtonStyle" style={{ padding: 0 }}>
+                    <HomeIcon color="black" size="30pt" />
+                </button>
 
-            <button className="MainMenuButtonStyle" style={{padding:0}}>
-                <HomeIcon color="black" size="30pt" />
-            </button>
-
-            <button className="MainMenuButtonStyle">
-                Finance
-            </button>
+                <button 
+                onClick={()=> navigate('/FinanceHomeView')}
+                className="MainMenuButtonStyle">
+                    Finance
+                </button>
 
             <button className="MainMenuButtonStyle">
                 Work

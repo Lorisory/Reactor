@@ -6,7 +6,7 @@ function DearMePage() {
 
 
   return (
-    <div style={{ width: '100%' }}>
+    <div style={{ width: '100%', backgroundColor: 'lightseagreen' }}>
       <DearMeNavigation />
       <DearMeSubpageContainer />
     </div>

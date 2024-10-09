@@ -8,7 +8,7 @@ export default function DearMeSubpageContainer() {
       justifyContent: 'center',
       alignItems: 'top',
       flexWrap: 'wrap', // Allows wrapping items
-      height: '100vh',
+      height: '75vh',
     }}
   >
     {/* Outlet will render the respective subpage content */}

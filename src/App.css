@@ -54,3 +54,13 @@
   box-sizing: border-box;
   padding: 6pt 6pt;
 }
+
+.MainMenuButtonStyle:hover {
+  background-color: #21a1f1;
+  transform: scale(1.05);
+}
+
+.MainMenuButtonStyle:active {
+  background-color: #007acc;
+  transform: scale(0.95);
+}

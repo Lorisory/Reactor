@@ -1,6 +1,6 @@
 import './App.css';
 import HomeIcon from './Icons/HomeIcon';
-import { useNavigate  } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function MainMenu() {
     const navigate = useNavigate();
@@ -13,19 +13,19 @@ function MainMenu() {
                 justifyContent: 'flex-start', // Vertikální zarovnání k horní části
                 width: '100%',
                 height: '100%',
-            }}
-        >
-                <button 
-                onClick={()=> navigate('/HomeView')}
-                className="MainMenuButtonStyle" style={{ padding: 0 }}>
-                    <HomeIcon color="black" size="30pt" />
-                </button>
+            }}>
 
-                <button 
-                onClick={()=> navigate('/FinanceHomeView')}
+            <button
+                onClick={() => navigate('/HomeView')}
+                className="MainMenuButtonStyle" style={{ padding: 0 }}>
+                <HomeIcon color="black" size="30pt" />
+            </button>
+
+            <button
+                onClick={() => navigate('/FinanceHomeView')}
                 className="MainMenuButtonStyle">
-                    Finance
-                </button>
+                Finance
+            </button>
 
             <button className="MainMenuButtonStyle">
                 Work
@@ -33,6 +33,12 @@ function MainMenu() {
 
             <button className="MainMenuButtonStyle">
                 Notes
+            </button>
+
+            <button
+                onClick={() => navigate('/DearMeHomeView')}
+                className="MainMenuButtonStyle">
+                DearMe
             </button>
 
         </div>

@@ -5,6 +5,7 @@ import ReactorFooter from './ReactorFooter';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HomeView from './HomeView';
 import FinanceHomeView from './Finance/FinanceHomeView';
+import DearMeHomeView from './DearMe/DearMeHomeView';
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
           <Routes>
             <Route path="/HomeView" element={<HomeView />} />
             <Route path="/FinanceHomeView" element={<FinanceHomeView />} />
+            <Route path="/DearMeHomeView" element={<DearMeHomeView />} />
           </Routes>
         </div>
 

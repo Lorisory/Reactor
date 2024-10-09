@@ -1,0 +1,34 @@
+.DearMeToolbarButton {
+    background-color: #f0e68c; /* Světlý béžovo-žlutý odstín evokující papírovou obálku */
+    margin: 15px 15px 10px 15px;
+    text-align: center;
+    display: flex;
+    font-size: 18pt;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    min-height: auto;
+    height: auto;
+    border: 2px solid #808080 ; /* Lehce tmavší okraj pro efekt hrany obálky */
+    border-radius: 5px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    white-space: normal;
+    box-sizing: border-box;
+    padding: 6pt 15pt;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Jemný stín pod tlačítkem */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.DearMeToolbarButton:hover {
+    background-color: #f3eac8; /* Tmavší béžovo-žlutý odstín při najetí myší */
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Zvýraznění stínu */
+}
+
+.DearMeToolbarButton:active {
+    background-color: #e6d7af; /* Tmavší odstín při kliknutí */
+    transform: scale(0.95);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); /* Menší stín při kliknutí */
+}

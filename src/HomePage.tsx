@@ -1,5 +1,5 @@
 
-function HomeView() {
+function HomePage() {
     return (
         <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
             {/* To-Do Items */}
@@ -40,4 +40,4 @@ function HomeView() {
     );
 }
 
-export default HomeView;
+export default HomePage;

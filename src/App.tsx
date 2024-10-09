@@ -38,7 +38,7 @@ function App() {
             <Route path="/home" element={<HomePage />} />
             <Route path="/finance" element={<FinanceHomeView />} />
 
-            {/* DearMeHomeView with subroutes */}
+            {/* DearMePage with subroutes */}
             <Route path="/dear-me" element={<DearMePage />}>
               <Route path="1-week" element={<OneWeekPage />} />
               <Route path="1-month" element={<OneMonthPage />} />

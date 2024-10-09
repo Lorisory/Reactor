@@ -2,7 +2,7 @@ import './App.css';
 import ReactorHeader from './ReactorHeader';
 import MainMenu from './MainMenu';
 import ReactorFooter from './ReactorFooter';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import HomeView from './HomeView';
 import FinanceHomeView from './Finance/FinanceHomeView';
 import DearMeHomeView from './DearMe/DearMeHomeView';
@@ -42,6 +42,7 @@ function App() {
           gridColumn: '2'
         }}>
           <Routes>
+            <Route path="/" element={<Navigate to="/HomeView" />} />
             <Route path="/HomeView" element={<HomeView />} />
             <Route path="/FinanceHomeView" element={<FinanceHomeView />} />
             <Route path="/DearMeHomeView" element={<DearMeHomeView />} />

@@ -1,8 +1,8 @@
 import './DearMeStyles.css';
-import Envelope from './Envelope';
 import { useNavigate } from 'react-router-dom';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import EnvelopeView from './EnvelopeView';
+import EnvelopeOverall from './EnvelopesOverall';
 
 function DearMeHomeView() {
     const navigate = useNavigate();
@@ -20,30 +20,21 @@ function DearMeHomeView() {
 
                 <button className="DearMeToolbarButton"
                     onClick={() => navigate('/EnvelopeView')}>
+                    Envelope
                     1 Week
                 </button>
-                <button className="DearMeToolbarButton">
+                <button className="DearMeToolbarButton"
+                    onClick={() => navigate('/EnvelopeOverall')}>
+                    EnvelopeOverall
                     1 Month
                 </button>
                 <button className="DearMeToolbarButton">
                     1 Year
                 </button>
             </div>
-
-            <div
-                style={{
-                    border: 'dashed red 3px',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'top',
-                    flexWrap: 'wrap', // Umožní zalamování položek
-                    height: '100vh',
-                }}
-            >
-                <Envelope text='1 Week' width={400} height={200} />
-                <Envelope text='1 Month' width={400} height={200} />
-                <Envelope text='1 Year' width={400} height={200} />
+            <div>
                 <Routes>
+                    <Route path="/EnvelopeOverall" element={<EnvelopeOverall />} />
                     <Route path="/EnvelopeView" element={<EnvelopeView />} />
                 </Routes>
             </div>

@@ -1,11 +1,16 @@
 import './App.css';
-import ReactorHeader from './ReactorHeader';
-import MainMenu from './MainMenu';
-import ReactorFooter from './ReactorFooter';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import HomeView from './HomeView';
+import HomePage from './HomePage';
 import FinanceHomeView from './Finance/FinanceHomeView';
-import DearMeHomeView from './DearMe/DearMeHomeView';
+import DearMePage from './DearMe/DearMePage';
+import EnvelopeView from './DearMe/EnvelopeView';
+import NotFound from './NotFound';
+import ReactorHeader from './ReactorHeader';
+import SidebarNavigation from './SidebarNavigation';
+import ReactorFooter from './ReactorFooter';
+import OneWeekPage from "./DearMe/SubPages/OneWeekPage";
+import OneMonthPage from "./DearMe/SubPages/OneMonthPage";
+import OneYearPage from "./DearMe/SubPages/OneYearPage";
 
 function App() {
   return (
@@ -14,52 +19,38 @@ function App() {
         display: 'grid',
         height: '100vh',
         gridTemplateRows: 'auto 1fr auto',
-        gridTemplateColumns: '1fr 4fr ',
+        gridTemplateColumns: '1fr 4fr',
+        gridTemplateAreas: `
+                    "header header"
+                    "sidebar content"
+                    "footer footer"
+                `
       }}>
-        <div style={{
-          //border: '1px dashed black',
-          backgroundColor: 'lightblue',
-          gridRow: '1',
-          gridColumn: '1/-1'
-        }}>
+        <div style={{ gridArea: 'header', backgroundColor: 'lightblue' }}>
           <ReactorHeader />
         </div>
-
-        <div style={{
-          //border: '1px dashed green',
-          gridRow: '2',
-          gridColumn: '1'
-        }}>
-          <MainMenu />
+        <div style={{ gridArea: 'sidebar' }}>
+          <SidebarNavigation />
         </div>
-
-        <div style={{
-          border: '1px dashed black',
-          backgroundColor: 'lightgray',
-          display: 'flex',
-          alignContent: 'center',
-          gridRow: '2',
-          gridColumn: '2'
-        }}>
+        <div style={{ gridArea: 'content', backgroundColor: 'lightgray', padding: '20px' }}>
           <Routes>
-            <Route path="/HomeView" element={<HomeView />} />
-            <Route path="/FinanceHomeView" element={<FinanceHomeView />} />
-            <Route path="/DearMeHomeView" element={<DearMeHomeView />} />
+            <Route path="/" element={<HomePage />} />
+            <Route path="/home" element={<HomePage />} />
+            <Route path="/finance" element={<FinanceHomeView />} />
+
+            {/* DearMeHomeView with subroutes */}
+            <Route path="/dear-me" element={<DearMePage />}>
+              <Route path="1-week" element={<OneWeekPage />} />
+              <Route path="1-month" element={<OneMonthPage />} />
+              <Route path="1-year" element={<OneYearPage />} />
+            </Route>
+
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
-
-
-        <div style={{
-          //border: '1px dashed yellow',
-          //backgroundColor: 'lightgray',
-          height: '100%',
-          minHeight: '10pt',
-          gridRow: '3',
-          gridColumn: 'span 3'
-        }}>
+        <div style={{ gridArea: 'footer' }}>
           <ReactorFooter />
         </div>
-
       </div>
     </Router>
   );

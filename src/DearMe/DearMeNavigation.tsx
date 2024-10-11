@@ -1,4 +1,4 @@
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function DearMeNavigation() {
   const navigate = useNavigate();
@@ -6,6 +6,7 @@ export default function DearMeNavigation() {
     display: 'flex',
     alignItems: 'center',
     textAlign: 'center',
+    backgroundColor: 'limegreen',
     justifyContent: 'center',
     width: '100%',
   }}>

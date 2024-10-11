@@ -7,6 +7,7 @@ export default function DearMeSubpageContainer() {
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'top',
+      background:'gray',
       flexWrap: 'wrap', // Allows wrapping items
       height: '75vh',
     }}

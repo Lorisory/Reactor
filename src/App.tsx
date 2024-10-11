@@ -1,9 +1,8 @@
 import './App.css';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import HomePage from './HomePage';
 import FinanceHomeView from './Finance/FinanceHomeView';
 import DearMePage from './DearMe/DearMePage';
-import EnvelopeView from './DearMe/EnvelopeView';
 import NotFound from './NotFound';
 import ReactorHeader from './ReactorHeader';
 import SidebarNavigation from './SidebarNavigation';
@@ -11,6 +10,12 @@ import ReactorFooter from './ReactorFooter';
 import OneWeekPage from "./DearMe/SubPages/OneWeekPage";
 import OneMonthPage from "./DearMe/SubPages/OneMonthPage";
 import OneYearPage from "./DearMe/SubPages/OneYearPage";
+
+import NotesPage from './Notes/NotesPage';
+import NotesSubPageA from './Notes/SubPages/NotesSubPageA';
+import NotesSubPageB from './Notes/SubPages/NotesSubPageB';
+import NotesSubPageC from './Notes/SubPages/NotesSubPageC';
+
 
 function App() {
   return (
@@ -43,6 +48,14 @@ function App() {
               <Route path="1-week" element={<OneWeekPage />} />
               <Route path="1-month" element={<OneMonthPage />} />
               <Route path="1-year" element={<OneYearPage />} />
+            </Route>
+
+            {/* Notes with subroutes */}
+            <Route path="/Notes" element={<NotesPage />}>
+              <Route path="/Notes/" element={<NotesSubPageA />} />
+              <Route path="NotesSubPageA" element={<NotesSubPageA />} />
+              <Route path="NotesSubPageB" element={<NotesSubPageB />} />
+              <Route path="NotesSubPageC" element={<NotesSubPageC />} />
             </Route>
 
             <Route path="*" element={<NotFound />} />

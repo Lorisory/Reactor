@@ -47,7 +47,7 @@ export default function SidebarNavigation() {
       </NavLink>
 
       <NavLink
-        to="/notes"
+        to="/Notes"
         style={({ isActive }) => ({
           fontWeight: isActive ? 'bold' : 'normal',
         })}

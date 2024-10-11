@@ -3,10 +3,8 @@ import DearMeNavigation from "./DearMeNavigation";
 import DearMeSubpageContainer from "./DearMeSubpageContainer";
 
 function DearMePage() {
-
-
   return (
-    <div style={{ width: '100%', backgroundColor: 'lightseagreen' }}>
+    <div style={{ width: '100%' }}>
       <DearMeNavigation />
       <DearMeSubpageContainer />
     </div>

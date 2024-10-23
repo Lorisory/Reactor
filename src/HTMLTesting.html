@@ -13,8 +13,9 @@
 	Elementy jsou například list, tabulka, odstavec. Tagy jsou to co je definuje/ohraničuje.
 	Atribut je nějaká vlastnos elementu.
 	<br>
-	Meta elements jsou elementy ucnitř head elementu. Jsou rozlišeny od sebe pomocí name což funguje jako klíč.
-	Například se tam uvádí keywords pro vyhledávání na internetu, dále třeba jazyk.
+	Meta elements jsou elementy ucnitř head elementu.Nejdou vidět pro usera. Jsou rozlišeny od sebe pomocí name což funguje jako klíč.
+	Například se tam uvádí keywords pro vyhledávání na internetu (už se moc nepoužívá), dále třeba jazyk.
+	Nemají closing tag.
 	<br>
 	<br>
 
@@ -155,6 +156,24 @@
 	</form>
 	<br>
 	<br>
+
+	<h2>Fieldset</h2>
+	<form>
+		<fieldset>
+	   
+		<legend>Enter day you want to travel to Cancun:</legend> 
+	   
+		<input type="date" name="day">
+	   
+		Number of days: <input type="number" name="numdays" min="1" max="10">
+	   
+		<br><br>
+	   
+		Name: <input type="text">
+	   
+		</fieldset>
+	  </form>
+
 
 </body>
 
